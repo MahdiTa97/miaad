@@ -22,7 +22,7 @@ const Footer: FC<Props> = ({ className, links }) => {
   return (
     <footer className={rootClassName}>
       <Container>
-        <div className="grid grid-cols-1 gap-8 py-12 transition-colors duration-150 border-b lg:grid-cols-12 border-accent-2 text-primary bg-secondary">
+        <div className="grid grid-cols-1 gap-8 py-12 transition-colors duration-150 bg-white border-b lg:grid-cols-12 border-accent-2 text-primary">
           <div className="col-span-1 lg:col-span-2">
             <Link href="/">
               <a className="flex items-center flex-initial font-bold md:mr-24">

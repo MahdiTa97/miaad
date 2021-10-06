@@ -8,7 +8,7 @@ const NavbarRoot: FC = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = throttle(() => {
-      const offset = 0
+      const offset = 150
       const { scrollTop } = document.documentElement
       const scrolled = scrollTop > offset
 
@@ -24,7 +24,12 @@ const NavbarRoot: FC = ({ children }) => {
   }, [hasScrolled])
 
   return (
-    <div className={cn(s.root, { 'shadow-magical': hasScrolled })}>
+    <div
+      className={cn(s.root, {
+        [s.isScrolledRoot]: hasScrolled,
+        [s.defaultRoot]: !hasScrolled,
+      })}
+    >
       {children}
     </div>
   )

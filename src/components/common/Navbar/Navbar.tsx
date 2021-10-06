@@ -15,7 +15,7 @@ interface NavbarProps {
 
 const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
-    <Container>
+    <Container className="max-w-xl px-3 sm:px-0 xl:max-w-5xl lg:max-w-3xl md:max-w-1xl sm:max-w-lg">
       <div className={s.nav}>
         <div className="flex items-center flex-1">
           <Link href="/">

@@ -1,17 +1,18 @@
 .root {
-  @apply relative w-full text-sm text-base transition-colors duration-150 border bg-accent-0 border-accent-2;
+  @apply relative w-full text-sm text-base transition-colors duration-150 border rounded-lg bg-accent-0 border-accent-2;
 }
 
 .input {
-  @apply w-full px-3 py-2 pr-10 transition duration-150 ease-in-out bg-transparent appearance-none;
-}
-
-.input::placeholder {
-  @apply text-accent-3;
-}
-
-.input:focus {
-  @apply outline-none shadow-outline-normal;
+  @apply w-full px-3 py-2 pr-10 transition duration-150 ease-in-out bg-transparent rounded-lg appearance-none;
+  &:focus {
+    @apply outline-none shadow-outline-normal;
+  }
+  &::placeholder {
+    @apply text-accent-3;
+  }
+  @screen sm {
+    min-width: 300px;
+  }
 }
 
 .iconContainer {
@@ -19,11 +20,5 @@
 }
 
 .icon {
-  @apply w-5 h-5;
-}
-
-@screen sm {
-  .input {
-    min-width: 300px;
-  }
+  @apply w-5 h-5 text-primary;
 }

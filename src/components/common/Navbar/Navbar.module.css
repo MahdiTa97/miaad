@@ -1,5 +1,12 @@
 .root {
-  @apply sticky top-0 z-40 py-2 transition-all duration-150 bg-white;
+  @apply sticky top-0 z-40 transition-all duration-150 bg-white;
+}
+
+.defaultRoot {
+  @apply py-3;
+}
+.isScrolledRoot {
+  @apply shadow-magical rounded-b-3xl;
 }
 
 .nav {
@@ -22,7 +29,6 @@
 
 .logo {
   @apply text-xl font-bold duration-100 ease-in-out transform cursor-pointer;
-
   &:hover {
     transform: scale(1.05);
   }
