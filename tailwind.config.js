@@ -14,9 +14,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        base: 'var(--color-bg-base)',
         primary: 'var(--color-bg-primary)',
         secondary: 'var(--color-bg-secondary)',
-        tertiary: 'var(--color-bg-tertiary)',
         hover: 'var(--hover)',
         'hover-1': 'var(--hover-1)',
         'hover-2': 'var(--hover-2)',

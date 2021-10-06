@@ -66,9 +66,9 @@
   --color-scarpaFlow-800: #101013;
   --color-scarpaFlow-900: #000000;
 
-  --color-bg-primary: var(--color-genoa-DEFAULT);
-  --color-bg-secondary: var(--color-yellowFuel-DEFAULT);
-  --color-bg-tertiary: var(--color-whiteLilac-DEFAULT);
+  --color-bg-base: var(--color-genoa-DEFAULT);
+  --color-bg-primary: var(--color-yellowFuel-DEFAULT);
+  --color-bg-secondary: var(--color-whiteLilac-DEFAULT);
   --color-text-base: var(--color-haiti-DEFAULT);
   --color-text-primary: var(--color-scarpaFlow-DEFAULT);
   --color-text-secondary: white;
@@ -94,9 +94,9 @@
 }
 
 [data-theme='dark'] {
-  --color-bg-primary: var(--color-genoa-DEFAULT);
-  --color-bg-secondary: var(--color-yellowFuel-DEFAULT);
-  --color-bg-tertiary: var(--color-whiteLilac-DEFAULT);
+  --color-bg-base: var(--color-genoa-DEFAULT);
+  --color-bg-primary: var(--color-yellowFuel-DEFAULT);
+  --color-bg-secondary: var(--color-whiteLilac-DEFAULT);
   --color-text-base: var(--color-haiti-DEFAULT);
   --color-text-primary: var(--color-scarpaFlow-DEFAULT);
   --color-text-secondary: white;

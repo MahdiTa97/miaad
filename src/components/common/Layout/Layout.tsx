@@ -96,7 +96,7 @@ const Layout: FC<Props> = ({ children }) => {
     <div className={cn(s.root)}>
       <Navbar links={navBarLinks} />
       <main className="fit">{children}</main>
-      <Footer />
+      <Footer links={navBarLinks} />
       <ModalUI />
       <SidebarUI />
       <FeatureBar
