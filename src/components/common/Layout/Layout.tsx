@@ -10,7 +10,7 @@ import LoginView from '@components/auth/LoginView'
 import s from './Layout.module.css'
 
 const Loading = () => (
-  <div className="w-80 h-80 flex items-center text-center justify-center p-3">
+  <div className="flex items-center justify-center p-3 text-center w-80 h-80">
     <LoadingDots />
   </div>
 )
@@ -34,12 +34,7 @@ const FeatureBar = dynamic(
   dynamicProps
 )
 
-interface Props {
-  pageProps: {
-    pages?: Page[]
-    categories: Category[]
-  }
-}
+interface Props {}
 
 const ModalView: FC<{ modalView: string; closeModal(): any }> = ({
   modalView,
@@ -67,10 +62,10 @@ const SidebarView: FC<{ sidebarView: string; closeSidebar(): any }> = ({
 }) => {
   return (
     <Sidebar onClose={closeSidebar}>
-      {sidebarView === 'CART_VIEW' && <CartSidebarView />}
+      {/* {sidebarView === 'CART_VIEW' && <CartSidebarView />}
       {sidebarView === 'CHECKOUT_VIEW' && <CheckoutSidebarView />}
       {sidebarView === 'PAYMENT_VIEW' && <PaymentMethodView />}
-      {sidebarView === 'SHIPPING_VIEW' && <ShippingView />}
+      {sidebarView === 'SHIPPING_VIEW' && <ShippingView />} */}
     </Sidebar>
   )
 }
@@ -82,22 +77,26 @@ const SidebarUI: FC = () => {
   ) : null
 }
 
-const Layout: FC<Props> = ({
-  children,
-  pageProps: { categories = [], ...pageProps },
-}) => {
+const Layout: FC<Props> = ({ children }) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
-  const navBarlinks = categories.slice(0, 2).map((c) => ({
-    label: c.name,
-    href: `/search/${c.slug}`,
-  }))
+
+  const navBarLinks = [
+    {
+      label: 'Courses',
+      href: '/',
+    },
+    {
+      label: 'Workshops',
+      href: '',
+    },
+  ]
 
   return (
     <div className={cn(s.root)}>
-      <Navbar links={navBarlinks} />
+      <Navbar links={navBarLinks} />
       <main className="fit">{children}</main>
-      <Footer pages={pageProps.pages} />
+      <Footer />
       <ModalUI />
       <SidebarUI />
       <FeatureBar

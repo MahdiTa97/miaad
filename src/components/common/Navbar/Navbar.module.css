@@ -1,10 +1,9 @@
 .root {
-  @apply sticky top-0 bg-primary z-40 transition-all duration-150;
-  min-height: 74px;
+  @apply sticky top-0 z-40 py-2 transition-all duration-150 bg-white;
 }
 
 .nav {
-  @apply relative flex flex-row justify-between py-4 md:py-4;
+  @apply relative flex flex-row justify-between py-4 md:py-4 text-link;
 }
 
 .navMenu {
@@ -12,24 +11,19 @@
 }
 
 .link {
-  @apply inline-flex items-center leading-6
-  transition ease-in-out duration-75 cursor-pointer
-  text-accent-5;
-}
-
-.link:hover {
-  @apply text-accent-9;
-}
-
-.link:focus {
-  @apply outline-none text-accent-8;
+  @apply inline-flex items-center font-thin leading-6 transition duration-75 ease-in-out cursor-pointer text-primary;
+  &:hover {
+    @apply text-accent-9;
+  }
+  &:focus {
+    @apply outline-none text-accent-8;
+  }
 }
 
 .logo {
-  @apply cursor-pointer rounded-full border transform duration-100 ease-in-out;
+  @apply text-xl font-bold duration-100 ease-in-out transform cursor-pointer;
 
   &:hover {
-    @apply shadow-md;
     transform: scale(1.05);
   }
 }

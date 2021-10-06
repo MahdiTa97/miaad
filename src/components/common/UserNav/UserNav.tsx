@@ -1,10 +1,10 @@
-import { FC } from 'react'
-import Link from 'next/link'
-import cn from 'classnames'
-import { Avatar } from '@components/common'
-import { Heart, Bag } from '@components/icons'
-import { useUI } from '@components/ui/context'
+import { Bag, Heart } from '@components/icons'
 import Button from '@components/ui/Button'
+import { useUI } from '@components/ui/context'
+import cn from 'classnames'
+import Link from 'next/link'
+import { FC } from 'react'
+import { Avatar } from '@components/common'
 import DropdownMenu from './DropdownMenu'
 import s from './UserNav.module.css'
 
@@ -12,56 +12,46 @@ interface Props {
   className?: string
 }
 
-const countItem = (count: number, item: LineItem) => count + item.quantity
-
 const UserNav: FC<Props> = ({ className }) => {
-  const { data } = useCart()
-  const { data: customer } = useCustomer()
   const { toggleSidebar, closeSidebarIfPresent, openModal } = useUI()
-  const itemsCount = data?.lineItems.reduce(countItem, 0) ?? 0
+  const isSignedIn = false
 
   return (
     <nav className={cn(s.root, className)}>
       <ul className={s.list}>
-        {process.env.COMMERCE_CART_ENABLED && (
-          <li className={s.item}>
-            <Button
-              className={s.item}
-              variant="naked"
-              onClick={toggleSidebar}
-              aria-label="Cart"
-            >
-              <Bag />
-              {itemsCount > 0 && (
+        <li className={s.item}>
+          <Button
+            className={s.item}
+            variant="naked"
+            onClick={toggleSidebar}
+            aria-label="Cart"
+          >
+            <Bag />
+            {/* {itemsCount > 0 && (
                 <span className={s.bagCount}>{itemsCount}</span>
-              )}
-            </Button>
-          </li>
-        )}
-        {process.env.COMMERCE_WISHLIST_ENABLED && (
-          <li className={s.item}>
-            <Link href="/wishlist">
-              <a onClick={closeSidebarIfPresent} aria-label="Wishlist">
-                <Heart />
-              </a>
-            </Link>
-          </li>
-        )}
-        {process.env.COMMERCE_CUSTOMERAUTH_ENABLED && (
-          <li className={s.item}>
-            {customer ? (
-              <DropdownMenu />
-            ) : (
-              <button
-                className={s.avatarButton}
-                aria-label="Menu"
-                onClick={() => openModal()}
-              >
-                <Avatar />
-              </button>
-            )}
-          </li>
-        )}
+              )} */}
+          </Button>
+        </li>
+        <li className={s.item}>
+          <Link href="/wishlist">
+            <a onClick={closeSidebarIfPresent} aria-label="Wishlist">
+              <Heart />
+            </a>
+          </Link>
+        </li>
+        <li className={s.item}>
+          {isSignedIn ? (
+            <DropdownMenu />
+          ) : (
+            <button
+              className={s.avatarButton}
+              aria-label="Menu"
+              onClick={() => openModal()}
+            >
+              <Avatar />
+            </button>
+          )}
+        </li>
       </ul>
     </nav>
   )
