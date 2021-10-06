@@ -69,9 +69,10 @@
   --color-bg-primary: var(--color-genoa-DEFAULT);
   --color-bg-secondary: var(--color-yellowFuel-DEFAULT);
   --color-bg-tertiary: var(--color-whiteLilac-DEFAULT);
-  --color-text-primary: var(--color-haiti-DEFAULT);
-  --color-text-secondary: var(--color-scarpaFlow-DEFAULT);
-  --color-text-tertiary: white;
+  --color-text-base: var(--color-haiti-DEFAULT);
+  --color-text-primary: var(--color-scarpaFlow-DEFAULT);
+  --color-text-secondary: white;
+  --color-text-link: var(--color-genoa-DEFAULT);
 
   --hover: rgba(0, 0, 0, 0.075);
   --hover-1: rgba(0, 0, 0, 0.15);
@@ -96,13 +97,14 @@
   --color-bg-primary: var(--color-genoa-DEFAULT);
   --color-bg-secondary: var(--color-yellowFuel-DEFAULT);
   --color-bg-tertiary: var(--color-whiteLilac-DEFAULT);
-  --color-text-primary: var(--color-haiti-DEFAULT);
-  --color-text-secondary: var(--color-scarpaFlow-DEFAULT);
-  --color-text-tertiary: white;
+  --color-text-base: var(--color-haiti-DEFAULT);
+  --color-text-primary: var(--color-scarpaFlow-DEFAULT);
+  --color-text-secondary: white;
+  --color-text-link: var(--color-genoa-DEFAULT);
 
-  --text-base: white;
-  --text-primary: white;
-  --text-secondary: black;
+  --hover: rgba(0, 0, 0, 0.075);
+  --hover-1: rgba(0, 0, 0, 0.15);
+  --hover-2: rgba(0, 0, 0, 0.25);
 
   --accent-9: #fff;
   --accent-8: #fafafa;
