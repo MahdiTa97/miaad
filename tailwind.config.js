@@ -35,6 +35,9 @@ module.exports = {
         base: 'var(--color-text-base)',
         primary: 'var(--color-text-primary)',
         secondary: 'var(--color-text-secondary)',
+        'bg-base': 'var(--color-bg-base)',
+        'bg-primary': 'var(--color-bg-primary)',
+        'bg-secondary': 'var(--color-bg-secondary)',
         link: 'var(--color-text-link)',
       },
       boxShadow: {
