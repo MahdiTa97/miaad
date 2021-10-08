@@ -1,0 +1,20 @@
+/* Variant ClassNames */
+.default {
+  @apply md:rounded-3xl;
+}
+
+.custom {
+}
+
+/* Background color classNames */
+.backgroundColor-base {
+  @apply bg-base;
+}
+
+.backgroundColor-primary {
+  @apply bg-primary;
+}
+
+.backgroundColor-secondary {
+  @apply bg-secondary;
+}
