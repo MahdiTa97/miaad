@@ -1,0 +1,40 @@
+.custom {
+}
+
+.body {
+  @apply max-w-6xl mx-auto text-lg font-medium leading-7;
+}
+
+.heading {
+  @apply mb-12 text-3xl;
+}
+
+.pageHeading {
+  @apply pt-1 pb-4 text-2xl font-bold leading-7 tracking-wide;
+}
+
+.sectionHeading {
+  @apply pt-1 pb-2 mb-3 font-semibold leading-7 tracking-wider uppercase;
+}
+
+.appTitle {
+  @apply text-xl md:font-normal text-naturalLightest;
+}
+
+.headerLink {
+  @apply relative mx-1 text-base font-normal capitalize text-naturalLightest hover:text-primary;
+}
+
+.headerLink::after {
+  content: "";
+  height: 1px;
+  @apply bottom-0 left-0 right-0 block w-0 mx-auto duration-300 bg-primary;
+}
+
+.headerLink:hover::after {
+  @apply w-full;
+}
+
+.headerLangSelector {
+  @apply mx-1 text-base font-normal capitalize text-naturalLightest hover:text-primary;
+}
